@@ -63,6 +63,9 @@ body {
   display: none;
 }
 .info-section {
+  display: none;
+}
+.info-section.active {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
