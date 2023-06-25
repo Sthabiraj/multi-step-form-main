@@ -216,3 +216,8 @@ input::placeholder {
 input[type="checkbox"] + .button::before {
   transform: translateX(100px);
 }
+.button-section button:nth-child(1) {
+  background-color: var(--white);
+  color: var(--cool-gray);
+  font-weight: 700;
+}
