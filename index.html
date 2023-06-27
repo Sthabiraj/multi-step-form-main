@@ -39,14 +39,14 @@
           </div>
         </div>
         <div class="sidebar-item">
-          <div class="number active">2</div>
+          <div class="number">2</div>
           <div class="info">
             <h1>Step 2</h1>
             <h2>Select plan</h2>
           </div>
         </div>
         <div class="sidebar-item">
-          <div class="number">3</div>
+          <div class="number active">3</div>
           <div class="info">
             <h1>Step 3</h1>
             <h2>Add-ons</h2>
@@ -117,6 +117,7 @@
               <div class="plan-info">
                 <h1>Arcade</h1>
                 <p>$9/mo</p>
+                <span></span>
               </div>
             </div>
             <div class="plan-item">
@@ -129,6 +130,7 @@
               <div class="plan-info">
                 <h1>Advanced</h1>
                 <p>$12/mo</p>
+                <span></span>
               </div>
             </div>
             <div class="plan-item">
@@ -138,13 +140,16 @@
               <div class="plan-info">
                 <h1>Pro</h1>
                 <p>$15/mo</p>
+                <span></span>
               </div>
             </div>
           </div>
           <div class="toggle">
             <h2 class="active">Monthly</h2>
-            <input type="checkbox" id="switch" />
-            <label for="switch" class="button"></label>
+            <div>
+              <input type="checkbox" id="switch" />
+              <label for="switch" class="button"></label>
+            </div>
             <h2>Yearly</h2>
           </div>
         </div>
@@ -154,18 +159,61 @@
         </div>
       </section>
       <!-- Step 2 end -->
+
+      <!-- Step 3 start -->
+      <section class="add-section">
+        <div class="top">
+          <div class="header">
+            <h1>Pick add-ons</h1>
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          <form class="add-ons">
+            <label class="add-on" for="add-on-1">
+              <div class="left">
+                <input type="checkbox" id="add-on-1" />
+                <div class="add-on-info">
+                  <h1>Online service</h1>
+                  <p>Access to multiplayer games</p>
+                </div>
+              </div>
+              <div class="right">+$1/mo</div>
+            </label>
+            <label class="add-on" for="add-on-2">
+              <div class="left">
+                <input type="checkbox" id="add-on-2" />
+                <div class="add-on-info">
+                  <h1>Larger storage</h1>
+                  <p>Extra 1TB of cloud save/p></p>
+                </div>
+              </div>
+              <div class="right">+$2/mo</div>
+            </label>
+            <label class="add-on" for="add-on-3">
+              <div class="left">
+                <input type="checkbox" id="add-on-3" />
+                <div class="add-on-info">
+                  <h1>Customizable profile</h1>
+                  <p>Custom theme on your profile</p>
+                </div>
+              </div>
+              <div class="right">+$2/mo</div>
+            </label>
+          </form>
+        </div>
+        <div class="button-section bottom">
+          <button>Go Back</button>
+          <button>Next Step</button>
+        </div>
+      </section>
+      <!-- Step 3 end -->
     </main>
 
     <!-- Monthly Yearly -->
 
-    <!-- Step 3 start -->
-
-    <!-- Pick add-ons Add-ons help enhance your gaming experience. Online service
-    Access to multiplayer games +$1/mo Larger storage Extra 1TB of cloud save
-    +$2/mo Customizable Profile Custom theme on your profile +$2/mo Go Back Next
+    <!--   
+       
+        Go Back Next
     Step -->
-
-    <!-- Step 3 end -->
 
     <!-- Step 4 start -->
 
