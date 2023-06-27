@@ -260,12 +260,13 @@ input::placeholder {
   padding: 0.7rem;
   cursor: pointer;
 }
-.add-on:hover {
+.add-on.active {
   border-color: var(--purplish-blue);
   background-color: hsla(229, 24%, 87%, 0.18);
 }
-input[type="checkbox"]:checked + label {
+.add-on:hover {
   border-color: var(--purplish-blue);
+  background-color: hsla(229, 24%, 87%, 0.18);
 }
 .add-on .left {
   display: flex;
