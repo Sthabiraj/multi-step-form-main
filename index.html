@@ -108,14 +108,15 @@
       <!-- Step 1 end -->
 
       <!-- Step 2 start -->
-      <section class="plan-section">
+      <section class="plan-section active">
         <div class="top">
           <div class="header">
             <h1>Select your plan</h1>
             <p>You have the option of monthly or yearly billing.</p>
           </div>
           <div class="plan-items">
-            <div class="plan-item active">
+            <input type="radio" id="arcade" name="plan" />
+            <label class="plan-item" for="arcade">
               <figure>
                 <img src="./assets/images/icon-arcade.svg" alt="Arcade icon" />
               </figure>
@@ -124,8 +125,9 @@
                 <p>$9/mo</p>
                 <span></span>
               </div>
-            </div>
-            <div class="plan-item">
+            </label>
+            <input type="radio" id="advanced" name="plan" />
+            <label class="plan-item" for="advanced">
               <figure>
                 <img
                   src="./assets/images/icon-advanced.svg"
@@ -137,8 +139,9 @@
                 <p>$12/mo</p>
                 <span></span>
               </div>
-            </div>
-            <div class="plan-item">
+            </label>
+            <input type="radio" id="pro" name="plan" />
+            <label class="plan-item" for="pro">
               <figure>
                 <img src="./assets/images/icon-pro.svg" alt="Pro icon" />
               </figure>
@@ -147,7 +150,7 @@
                 <p>$15/mo</p>
                 <span></span>
               </div>
-            </div>
+            </label>
           </div>
           <div class="toggle">
             <h2 class="active">Monthly</h2>
@@ -267,17 +270,6 @@
       </section>
       <!-- Step 5 end -->
     </main>
-
-    <!-- Monthly Yearly -->
-
-    <!--   
-        Go Back Next
-    Step -->
-
-    <!-- Dynamically add subscription and add-on selections here -->
-
-    <!-- Total (per month/year) Go Back Confirm -->
-    -->
 
     <div class="attribution">
       Challenge by

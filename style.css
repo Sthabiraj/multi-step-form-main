@@ -167,9 +167,12 @@ button:hover {
 .plan-item:hover {
   border: 1px solid var(--purplish-blue);
 }
-.plan-item.active {
+input[type="radio"]:checked + .plan-item {
   border: 1px solid var(--purplish-blue);
   background-color: hsla(229, 24%, 87%, 0.18);
+}
+input[type="radio"] {
+  display: none;
 }
 .plan-item figure img {
   width: 2.3rem;
@@ -397,6 +400,9 @@ button.confirm {
 
 /* Thank you section */
 .thank-you-section {
+  display: none;
+}
+.thank-you-section.active {
   justify-content: flex-start;
 }
 .thank-you-section .top {
@@ -415,7 +421,7 @@ button.confirm {
   width: 3.2rem;
 }
 .thank-you-section h1 {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .thank-you-section p {
   font-size: 0.95rem;
