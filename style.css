@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 .sidebar-section {
-  background: url(./assets/images/bg-sidebar-mobile.svg) no-repeat;
+  background: url(./assets/images/bg-sidebar-mobile.svg);
   display: flex;
   height: 165px;
   justify-content: center;
@@ -425,4 +425,11 @@ button.confirm {
 }
 .thank-you-section p {
   font-size: 0.95rem;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px) {
+  .container {
+    background-color: aquamarine;
+  }
 }
