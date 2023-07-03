@@ -438,29 +438,79 @@ button.confirm {
   .container {
     flex-direction: row;
     background-color: var(--white);
-    width: fit-content;
-    height: 35.5rem;
+    max-width: 53.6rem;
+    max-height: 33.5rem;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 15px;
   }
   .sidebar-section {
     position: static;
     background: url(./assets/images/bg-sidebar-desktop.svg) no-repeat;
     height: 100%;
+    max-height: 28.8rem;
+    max-width: 11.5rem;
     width: 100%;
     z-index: 1;
     flex-direction: column;
+    background-size: cover;
+    border-radius: 10px;
+    justify-content: flex-start;
+    padding: 2.4rem 2rem;
+    gap: 1.8rem;
   }
   .sidebar-item {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 0.8rem;
   }
   .sidebar-item .number {
     width: 0.5rem;
+    margin-top: 0;
+  }
+  .sidebar-item .info {
+    display: block;
+  }
+  .info h1 {
+    color: var(--cool-gray);
+    font-weight: 400;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+  }
+  .info h2 {
+    color: var(--white);
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+    text-transform: uppercase;
+    font-weight: 500;
   }
   .info-section.active {
-    justify-content: flex-start;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    padding-left: 5.8rem;
+    margin: 0;
   }
   .info-section .top {
-    margin: 0;
+    margin-top: 1.5rem;
+    box-shadow: none;
+    padding: 0;
+  }
+  .info-section .bottom {
+    padding: 0;
+  }
+  .header {
+    margin-bottom: 2.3rem;
+  }
+  .header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+  .header p {
+    font-size: 0.91rem;
+  }
+  .info-head {
+    margin-bottom: 0.45rem !important;
   }
 }
