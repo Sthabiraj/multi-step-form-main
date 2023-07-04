@@ -81,27 +81,36 @@
                 <label>Name</label>
                 <label class="error"></label>
               </div>
-              <input type="text" placeholder="e.g. Stephen King" />
+              <input type="text" placeholder="e.g. Stephen King" id="name" />
             </div>
             <div class="info-item">
               <div class="info-head">
                 <label>Email Address</label>
                 <label class="error"></label>
               </div>
-              <input type="email" placeholder="e.g. stephenking@lorem.com" />
+              <input
+                type="email"
+                placeholder="e.g. stephenking@lorem.com"
+                id="email"
+              />
             </div>
             <div class="info-item">
               <div class="info-head">
                 <label>Phone Number</label>
                 <label class="error"></label>
               </div>
-              <input type="tel" placeholder="e.g. +1 234 567 890" />
+              <input
+                type="tel"
+                placeholder="e.g. +1 234 567 890"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                id="phone"
+              />
             </div>
           </form>
         </div>
         <div class="button-section bottom">
           <span></span>
-          <button>Next Step</button>
+          <button onclick="checkPersonalInfo()">Next Step</button>
         </div>
       </section>
       <!-- Form end -->

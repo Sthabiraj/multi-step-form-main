@@ -11,3 +11,13 @@ for (let i = 0; i < checkbox.length; i++) {
     }
   });
 }
+
+// Getting information from Personal info
+const checkPersonalInfo = () => {
+  const personalInfo = [
+    document.querySelector("#name").value,
+    document.querySelector("#email").value,
+    document.querySelector("#phone").value,
+  ];
+  console.log(personalInfo);
+};
