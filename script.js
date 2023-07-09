@@ -15,12 +15,15 @@ for (let i = 0; i < checkbox.length; i++) {
 // Getting information from Personal info
 const errorLabel = document.querySelectorAll(".info-head .error");
 const inputBox = document.querySelectorAll(".info-item input");
+const infoSection = document.querySelector(".info-section");
+const planSection = document.querySelector(".plan-section");
 const checkPersonalInfo = () => {
   const personalInfo = [
     document.querySelector("#name").value,
     document.querySelector("#email").value,
     document.querySelector("#phone").value,
   ];
+  let condition = false;
   // Condition for null input
   for (let i = 0; i < personalInfo.length; i++) {
     if (personalInfo[i] == "") {
@@ -29,6 +32,7 @@ const checkPersonalInfo = () => {
     } else {
       errorLabel[i].innerText = "";
       inputBox[i].classList.remove("error");
+      condition = true;
     }
   }
   // Name validation
@@ -38,7 +42,6 @@ const checkPersonalInfo = () => {
     "Email should be valid",
     "Phone should be valid",
   ];
-  const validInfo = [];
   for (let i = 0; i < personalInfo.length; i++) {
     if (personalInfo[i] != "") {
       if (!personalInfo[i].match(regex[i])) {
@@ -47,9 +50,12 @@ const checkPersonalInfo = () => {
       } else {
         errorLabel[i].innerText = "";
         inputBox[i].classList.remove("error");
-        validInfo[i] = personalInfo[i];
+        condition = true;
       }
     }
   }
-  return validInfo;
+  if (condition == true) {
+    infoSection.classList.remove("active");
+    planSection.classList.add("active");
+  }
 };
