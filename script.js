@@ -57,5 +57,8 @@ const checkPersonalInfo = () => {
   if (condition == true) {
     infoSection.classList.remove("active");
     planSection.classList.add("active");
+  } else {
+    infoSection.classList.add("active");
+    planSection.classList.remove("active");
   }
 };
