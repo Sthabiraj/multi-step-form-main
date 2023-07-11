@@ -17,44 +17,37 @@ const errorLabel = document.querySelectorAll(".info-head .error");
 const inputBox = document.querySelectorAll(".info-item input");
 const infoSection = document.querySelector(".info-section");
 const planSection = document.querySelector(".plan-section");
+
 const checkPersonalInfo = () => {
   const personalInfo = [
     document.querySelector("#name").value,
     document.querySelector("#email").value,
     document.querySelector("#phone").value,
   ];
-  let condition = false;
-  // Condition for null input
-  for (let i = 0; i < personalInfo.length; i++) {
-    if (personalInfo[i] == "") {
-      errorLabel[i].innerText = "This field is required";
-      inputBox[i].classList.add("error");
-    } else {
-      errorLabel[i].innerText = "";
-      inputBox[i].classList.remove("error");
-      condition = true;
-    }
-  }
-  // Name validation
   const regex = [/^[A-Za-z\s'-]+$/, /^[^\s@]+@[^\s@]+\.[^\s@]+/, /^\d{10}$/];
   const errorMsg = [
     "Name should be valid",
     "Email should be valid",
     "Phone should be valid",
   ];
+  let formValid = true; // Assume form is valid initially
+
   for (let i = 0; i < personalInfo.length; i++) {
-    if (personalInfo[i] != "") {
-      if (!personalInfo[i].match(regex[i])) {
-        errorLabel[i].innerText = errorMsg[i];
-        inputBox[i].classList.add("error");
-      } else {
-        errorLabel[i].innerText = "";
-        inputBox[i].classList.remove("error");
-        condition = true;
-      }
+    if (personalInfo[i] == "") {
+      errorLabel[i].innerText = "This field is required";
+      inputBox[i].classList.add("error");
+      formValid = false; // Set formValid to false if any input is empty
+    } else if (!personalInfo[i].match(regex[i])) {
+      errorLabel[i].innerText = errorMsg[i];
+      inputBox[i].classList.add("error");
+      formValid = false; // Set formValid to false if any input is invalid
+    } else {
+      errorLabel[i].innerText = "";
+      inputBox[i].classList.remove("error");
     }
   }
-  if (condition == true) {
+
+  if (formValid) {
     infoSection.classList.remove("active");
     planSection.classList.add("active");
   } else {
