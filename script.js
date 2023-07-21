@@ -1,6 +1,7 @@
 // Add-on section
 let addOn = document.querySelectorAll(".add-on");
 let checkbox = document.querySelectorAll('.add-on input[type="checkbox"]');
+let step = document.querySelectorAll(".number");
 
 for (let i = 0; i < checkbox.length; i++) {
   checkbox[i].addEventListener("change", (event) => {
@@ -50,8 +51,43 @@ const checkPersonalInfo = () => {
   if (formValid) {
     infoSection.classList.remove("active");
     planSection.classList.add("active");
+
+    step[0].classList.remove("active");
+    step[1].classList.add("active");
   } else {
     infoSection.classList.add("active");
     planSection.classList.remove("active");
+
+    step[0].classList.add("active");
+    step[1].classList.remove("active");
   }
 };
+
+// Select your plan section
+let h2 = document.querySelectorAll(".toggle h2");
+let toggle = document.querySelector(".toggle input[type='checkbox']");
+let plan = document.querySelectorAll(".plan");
+let freeMonths = document.querySelectorAll(".free-months");
+
+const monthlyPlan = [9, 12, 15];
+const yearlyPlan = [90, 120, 150];
+
+toggle.addEventListener("change", () => {
+  if (toggle.checked) {
+    h2[1].classList.add("active");
+    h2[0].classList.remove("active");
+    // Yearly plan pricing
+    for (let i = 0; i < plan.length; i++) {
+      plan[i].innerHTML = `$${yearlyPlan[i]}/yr`;
+      freeMonths[i].innerHTML = "2 months free";
+    }
+  } else {
+    h2[1].classList.remove("active");
+    h2[0].classList.add("active");
+    // Monthly Plan pricing
+    for (let i = 0; i < plan.length; i++) {
+      plan[i].innerHTML = `$${monthlyPlan[i]}/mo`;
+      freeMonths[i].innerHTML = "";
+    }
+  }
+});
