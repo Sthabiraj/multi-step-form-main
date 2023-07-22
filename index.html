@@ -124,7 +124,13 @@
             <p>You have the option of monthly or yearly billing.</p>
           </div>
           <div class="plan-items">
-            <input type="radio" id="arcade" name="plan" />
+            <input
+              type="radio"
+              id="arcade"
+              name="plan"
+              checked
+              class="plan-options"
+            />
             <label class="plan-item" for="arcade">
               <figure>
                 <img src="./assets/images/icon-arcade.svg" alt="Arcade icon" />
@@ -135,7 +141,12 @@
                 <span class="free-months"></span>
               </div>
             </label>
-            <input type="radio" id="advanced" name="plan" />
+            <input
+              type="radio"
+              id="advanced"
+              name="plan"
+              class="plan-options"
+            />
             <label class="plan-item" for="advanced">
               <figure>
                 <img
@@ -149,7 +160,7 @@
                 <span class="free-months"></span>
               </div>
             </label>
-            <input type="radio" id="pro" name="plan" />
+            <input type="radio" id="pro" name="plan" class="plan-options" />
             <label class="plan-item" for="pro">
               <figure>
                 <img src="./assets/images/icon-pro.svg" alt="Pro icon" />
@@ -162,7 +173,7 @@
             </label>
           </div>
           <div class="toggle">
-            <h2>Monthly</h2>
+            <h2 class="active">Monthly</h2>
             <div>
               <input type="checkbox" id="switch" />
               <label for="switch" class="button"></label>

@@ -68,9 +68,12 @@ let h2 = document.querySelectorAll(".toggle h2");
 let toggle = document.querySelector(".toggle input[type='checkbox']");
 let plan = document.querySelectorAll(".plan");
 let freeMonths = document.querySelectorAll(".free-months");
+let planOptions = document.querySelectorAll(".plan-options");
 
 const monthlyPlan = [9, 12, 15];
 const yearlyPlan = [90, 120, 150];
+
+let planCost;
 
 toggle.addEventListener("change", () => {
   if (toggle.checked) {
@@ -80,6 +83,10 @@ toggle.addEventListener("change", () => {
     for (let i = 0; i < plan.length; i++) {
       plan[i].innerHTML = `$${yearlyPlan[i]}/yr`;
       freeMonths[i].innerHTML = "2 months free";
+      // for plan
+      if (planOptions[i].checked) {
+        planCost = yearlyPlan[i];
+      }
     }
   } else {
     h2[1].classList.remove("active");
@@ -88,6 +95,10 @@ toggle.addEventListener("change", () => {
     for (let i = 0; i < plan.length; i++) {
       plan[i].innerHTML = `$${monthlyPlan[i]}/mo`;
       freeMonths[i].innerHTML = "";
+      // for plan
+      if (planOptions[i].checked) {
+        planCost = monthlyPlan[i];
+      }
     }
   }
 });
