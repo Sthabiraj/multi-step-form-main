@@ -102,3 +102,9 @@ toggle.addEventListener("change", () => {
     }
   }
 });
+
+let backBtn = document.querySelector(".plan-section button:nth-child(1)");
+backBtn.addEventListener("click", () => {
+  infoSection.classList.add("active");
+  planSection.classList.remove("active");
+});
