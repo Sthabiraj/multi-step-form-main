@@ -103,6 +103,7 @@ toggle.addEventListener("change", () => {
   }
 });
 
+// For back button
 let backBtn = document.querySelector(".plan-section button:nth-child(1)");
 backBtn.addEventListener("click", () => {
   infoSection.classList.add("active");
